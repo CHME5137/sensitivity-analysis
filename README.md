@@ -4,7 +4,7 @@ Notebooks for CHME 5137 (2026): sensitivity analysis with SALib, after Lecture 1
 
 | Notebook | What it is |
 |---|---|
-| `cstr-sensitivity.ipynb` | The sensitivity homework: local, Morris and Sobol analyses of a cooled CSTR running A ⇌ B |
+| `cstr-sensitivity.ipynb` | Local, Morris and Sobol analyses of a cooled continuous stirred-tank reactor running A ⇌ B |
 
 Each notebook has a paired `.py` file holding the same cells as plain text (see
 **Jupytext** below).
@@ -23,10 +23,11 @@ Each notebook has a paired `.py` file holding the same cells as plain text (see
    On Explorer, in the course venv, from a terminal on a compute node:
    ```bash
    source ~/venvs/chme5137/bin/activate
-   pip install --upgrade SALib ipywidgets
+   python -m pip install "SALib==1.6.0"
    ```
-   With Anaconda on a laptop: `conda install -c conda-forge salib ipywidgets`. Or, either
-   way, run `%pip install --upgrade SALib` in a notebook cell, then restart the kernel.
+   With Anaconda on a laptop, run `conda install -c conda-forge salib=1.6.0` in your course
+   environment. You can also run `%pip install "SALib==1.6.0"` in a notebook cell with the
+   course kernel selected, then restart that kernel.
 4. Open `cstr-sensitivity.ipynb` and work through it, using your own kernel (`CHME5137` on
    Explorer). Commit and push as you go:
    ```bash
